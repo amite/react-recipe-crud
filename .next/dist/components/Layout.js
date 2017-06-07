@@ -62,20 +62,20 @@ var Layout = function (_Component) {
           fileName: _jsxFileName,
           lineNumber: 10
         }
-      }), _react2.default.createElement(_Nav2.default, {
-        __source: {
+      }), _react2.default.createElement('div', { className: 'container recipe__container', __source: {
           fileName: _jsxFileName,
           lineNumber: 11
         }
-      }), _react2.default.createElement('div', { className: 'container', __source: {
+      }, _react2.default.createElement('div', { className: 'row', __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         }
-      }, _react2.default.createElement('div', { className: 'row', __source: {
+      }, this.props.children)), _react2.default.createElement('style', {
+        __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 16
         }
-      }, this.props.children)));
+      }, '\n          .recipe__container { \n            \n          }\n        '));
     }
   }]);
 

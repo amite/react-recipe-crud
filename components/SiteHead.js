@@ -14,10 +14,26 @@ class SiteHead extends Component {
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
         <style global>{`
           body {
-            background: hsla(0, 0%, 88%, 0.53);
+            background: url('/static/img/recipe-bkg.jpg') no-repeat;
+            background-size: cover;
             font-family: 'Lora','Helvetica Neue', Helvetica,Arial, sans-serif;
             font-size: 18px;
-            color: #3c3b3b;                 
+            color: #3c3b3b;
+            width: 100vw;
+            height: 100vh;                
+          }
+
+          body::before {
+            content: "";
+            background-color: #666;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0.6;
           }
 
           h1, h2, h3 { 
@@ -44,7 +60,7 @@ class SiteHead extends Component {
           }
         `}</style>
       </Head>
-            )
+    )
   }
 }
 

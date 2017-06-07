@@ -8,12 +8,16 @@ class Layout extends Component {
     return (
       <div>
         <SiteHead title={this.props.title}/>
-        <Nav />
-        <div className="container">
+        <div className="container recipe__container">
           <div className="row">
             {this.props.children}
           </div>
         </div>
+        <style>{`
+          .recipe__container { 
+            
+          }
+        `}</style>
       </div>
     )
   }
