@@ -37,7 +37,7 @@ class EditModal extends Component {
             top: 50%;
             transform: translate(50%, -50%);
             padding: 30px;
-            min-height: 500px;
+            min-height: 350px;
             border-radius: 5px;
             position: fixed;
             box-shadow: 0px 3px 6px 6px rgba(0, 0, 0, 0.23);

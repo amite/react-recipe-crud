@@ -32,8 +32,12 @@ class RecipeApp extends Component {
     return { recipes }
   }
 
-  handleCreateRecipe = (data) => {
-    console.log(data)
+  state = { recipes: this.props.recipes }
+
+  handleCreateRecipe = (recipeName) => {
+    let newRecipe = { recipeName, ingredients: [], description: "" }
+    let updatedRecipes = this.state.recipes.concat(newRecipe)
+    this.setState({ recipes: updatedRecipes })
   }
 
   render() {
@@ -41,7 +45,7 @@ class RecipeApp extends Component {
       <Layout title="React CRUD Recipe App">
         <div className="app col-md-6 col-md-offset-3">
           <NewRecipeForm {...this.props} handleCreateRecipe={this.handleCreateRecipe}  />
-          <RecipeList {...this.props} />
+          <RecipeList {...this.state} />
         </div>
       </Layout>
     )

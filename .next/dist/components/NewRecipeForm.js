@@ -49,9 +49,10 @@ var NewRecipeForm = function (_Component) {
 
     return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = NewRecipeForm.__proto__ || (0, _getPrototypeOf2.default)(NewRecipeForm)).call.apply(_ref, [this].concat(args))), _this), _this.state = { value: "" }, _this.handleChange = function (e) {
       _this.setState({ value: e.target.value });
-    }, _this.handleFormSubmit = function (e) {
-      e.preventDefault();
+    }, _this.handleFormSubmit = function (ev) {
+      ev.preventDefault();
       _this.state.value ? _this.props.handleCreateRecipe(_this.state.value) : console.log('empty');
+      _this.setState({ value: "" });
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
 
@@ -62,11 +63,11 @@ var NewRecipeForm = function (_Component) {
         onSubmit: this.handleFormSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 19
         }
       }, _react2.default.createElement('div', { className: 'input-group add-on', __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         }
       }, _react2.default.createElement('input', {
         placeholder: 'Add New Recipe',
@@ -76,11 +77,11 @@ var NewRecipeForm = function (_Component) {
         className: 'form-control',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         }
       }), _react2.default.createElement('div', { className: 'input-group-btn', __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 30
         }
       }, _react2.default.createElement('input', {
         type: 'submit',
@@ -88,12 +89,12 @@ var NewRecipeForm = function (_Component) {
         onClick: this.handleFormSubmit,
         className: 'form-control btn btn-primary', __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 31
         }
       }))), _react2.default.createElement('style', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 40
         }
       }, '\n          #add-recipe {\n            background: rgba(76, 149, 187, 0.74);\n            padding: 10px;\n            text-align: center;\n            min-width: 100%;\n            position: absolute;\n            left: 0;\n            top: 0px;\n          }\n          #add-recipe input {\n            padding: 0 10px;\n          }\n        '));
     }

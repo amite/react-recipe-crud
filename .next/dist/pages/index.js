@@ -71,8 +71,10 @@ var RecipeApp = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RecipeApp.__proto__ || (0, _getPrototypeOf2.default)(RecipeApp)).call.apply(_ref, [this].concat(args))), _this), _this.handleCreateRecipe = function (data) {
-      console.log(data);
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RecipeApp.__proto__ || (0, _getPrototypeOf2.default)(RecipeApp)).call.apply(_ref, [this].concat(args))), _this), _this.state = { recipes: _this.props.recipes }, _this.handleCreateRecipe = function (recipeName) {
+      var newRecipe = { recipeName: recipeName, ingredients: [], description: "" };
+      var updatedRecipes = _this.state.recipes.concat(newRecipe);
+      _this.setState({ recipes: updatedRecipes });
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
 
@@ -81,20 +83,20 @@ var RecipeApp = function (_Component) {
     value: function render() {
       return _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App', __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 45
         }
       }, _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 46
         }
       }, _react2.default.createElement(_NewRecipeForm2.default, (0, _extends3.default)({}, this.props, { handleCreateRecipe: this.handleCreateRecipe, __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 47
         }
-      })), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.props, {
+      })), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 48
         }
       }))));
     }

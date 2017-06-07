@@ -8,9 +8,10 @@ export default class NewRecipeForm extends Component{
     this.setState({value: e.target.value})
   }
 
-  handleFormSubmit = (e) => {
-    e.preventDefault()
+  handleFormSubmit = (ev) => {
+    ev.preventDefault()
     this.state.value ? this.props.handleCreateRecipe(this.state.value) : console.log('empty')
+    this.setState({value: ""})
   }
   
   render() {
