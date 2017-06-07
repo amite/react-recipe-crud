@@ -11,7 +11,9 @@ class SiteHead extends Component {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://propeller.in/components/textfield/css/textfield.css"/>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+        
         <style global>{`
           body {
             background: url('/static/img/recipe-bkg.jpg') no-repeat;
@@ -60,7 +62,7 @@ class SiteHead extends Component {
           }
 
           .recipe-item {
-            margin-bottom: 15px;
+            margin-bottom: 15px !important;
             min-height: 30px;
             background: rgb(255, 193, 7);
             color: white;

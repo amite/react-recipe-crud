@@ -28,9 +28,13 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Recipe = require('./Recipe');
+var _RecipeEntry = require('./RecipeEntry');
 
-var _Recipe2 = _interopRequireDefault(_Recipe);
+var _RecipeEntry2 = _interopRequireDefault(_RecipeEntry);
+
+var _EditModal = require('../components/EditModal');
+
+var _EditModal2 = _interopRequireDefault(_EditModal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51,23 +55,18 @@ var RecipeList = function (_Component) {
     value: function render() {
 
       var renderRecipe = function renderRecipe(recipe, index) {
-        return _react2.default.createElement(_Recipe2.default, { recipe: recipe, __source: {
+        return _react2.default.createElement(_RecipeEntry2.default, { key: index, recipe: recipe, __source: {
             fileName: _jsxFileName,
-            lineNumber: 9
+            lineNumber: 11
           }
         });
       };
 
       return _react2.default.createElement('div', { className: 'recipe-list', __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 14
         }
-      }, this.props.recipes.map(renderRecipe), _react2.default.createElement('style', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        }
-      }, '\n          .recipe-list { \n            margin-top: 80px;\n          }\n        '));
+      }, this.props.recipes.map(renderRecipe));
     }
   }]);
 

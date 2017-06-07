@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
 
-export default class NewRecipe extends Component{
+export default class NewRecipeForm extends Component{
   
   state = { value: "" }
 
   handleChange = (e) => {
     this.setState({value: e.target.value})
   }
-  
+
+  handleFormSubmit = (e) => {
+    e.preventDefault()
+    this.state.value ? this.props.handleCreateRecipe(this.state.value) : console.log('empty')
+  }
   
   render() {
     return(
-      <form
-        id="add-recipe"
-        onSubmit={this.props.onAddRecipe}
-        value={this.state.value}
+      <form id="add-recipe"
+        onSubmit={this.handleFormSubmit}
       >
         <div className="input-group add-on">
           <input
@@ -28,6 +30,7 @@ export default class NewRecipe extends Component{
               <input
               type="submit"
               value="+ Add"
+              onClick={this.handleFormSubmit}
               className="form-control btn btn-primary" />
             </div>
 

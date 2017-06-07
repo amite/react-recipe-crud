@@ -1,22 +1,18 @@
 import React, { Component } from 'react'
 
-import Recipe from './Recipe'
+import RecipeEntry from './RecipeEntry'
+import EditModal from '../components/EditModal'
+
 
 class RecipeList extends Component {
 
   render () {
     
-    const renderRecipe = (recipe, index) => <Recipe recipe={recipe} />
+    const renderRecipe = (recipe, index) => <RecipeEntry key={index} recipe={recipe} />
 
     return (
       <div className="recipe-list">
         {this.props.recipes.map(renderRecipe)}
-
-        <style>{`
-          .recipe-list { 
-            margin-top: 80px;
-          }
-        `}</style>
       </div>
     )
   }
