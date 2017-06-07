@@ -58,6 +58,18 @@ class SiteHead extends Component {
             line-height: 1.2;
             color: #6d6d6d;
           }
+
+          .recipe-item {
+            margin-bottom: 15px;
+            min-height: 30px;
+            background: rgb(255, 193, 7);
+            color: white;
+            border-radius: 5px;
+          }
+
+          .glyphicon-pencil {
+            float: right;
+          }
         `}</style>
       </Head>
     )
