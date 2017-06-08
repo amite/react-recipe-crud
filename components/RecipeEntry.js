@@ -16,6 +16,11 @@ class RecipeEntry extends Component {
     this.setState({ isEditing: !this.state.isEditing })    
   }
 
+  handleRemoveRecipe = (ev) => {
+    ev.preventDefault()
+    this.props.deleteRecipe(this.props.recipe.recipeName)
+  }
+
   render() {
     const { recipeName, description, ingredients } = this.props.recipe
 
@@ -29,6 +34,7 @@ class RecipeEntry extends Component {
                 "glyphicon-plus"}`
               } />&nbsp;&nbsp;
             {recipeName}
+            <a onClick={this.handleRemoveRecipe} href="#"><i className="glyphicon glyphicon-remove" /></a>            
             <a onClick={this.toggleEditing} href="#"><i className="glyphicon glyphicon-pencil" /></a>
           </h4>
 

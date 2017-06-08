@@ -22,8 +22,10 @@ class RecipeList extends Component {
               border: none;
             }
 
-            .glyphicon-pencil {
+            .glyphicon-pencil, .glyphicon-remove {
               float: right;
+              margin-left: 20px;
+              color: white;
             }
             .recipeHeading {
               font-size: 1em;

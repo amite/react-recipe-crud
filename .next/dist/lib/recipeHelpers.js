@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.loadRecipes = exports.addRecipe = exports.updateRecipe = undefined;
+exports.loadRecipes = exports.removeRecipe = exports.addRecipe = exports.updateRecipe = undefined;
 
 var _toConsumableArray2 = require("babel-runtime/helpers/toConsumableArray");
 
@@ -20,6 +20,13 @@ var updateRecipe = exports.updateRecipe = function updateRecipe(recipes, updated
 
 var addRecipe = exports.addRecipe = function addRecipe(recipes, newRecipe) {
   return [newRecipe].concat((0, _toConsumableArray3.default)(recipes));
+};
+
+var removeRecipe = exports.removeRecipe = function removeRecipe(recipes, recipeName) {
+  var removeIndex = recipes.findIndex(function (item) {
+    return item.recipeName === recipeName;
+  });
+  return [].concat((0, _toConsumableArray3.default)(recipes.slice(0, removeIndex)), (0, _toConsumableArray3.default)(recipes.slice(removeIndex + 1)));
 };
 
 var loadRecipes = exports.loadRecipes = function loadRecipes() {

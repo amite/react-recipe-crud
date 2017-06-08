@@ -63,6 +63,9 @@ var RecipeEntry = function (_Component) {
       _this.setState({ showEntry: !_this.state.showEntry });
     }, _this.toggleEditing = function (e) {
       _this.setState({ isEditing: !_this.state.isEditing });
+    }, _this.handleRemoveRecipe = function (ev) {
+      ev.preventDefault();
+      _this.props.deleteRecipe(_this.props.recipe.recipeName);
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
 
@@ -76,33 +79,41 @@ var RecipeEntry = function (_Component) {
 
       return _react2.default.createElement('div', { className: 'list-group-item recipe-item', __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 28
         }
       }, _react2.default.createElement('h4', { className: 'list-group-item-heading recipeHeading', __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 29
         }
       }, _react2.default.createElement('i', { onClick: this.toggleEntry,
         className: 'glyphicon ' + (this.state.showEntry ? "glyphicon-minus" : "glyphicon-plus"), __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 30
         }
-      }), '\xA0\xA0', recipeName, _react2.default.createElement('a', { onClick: this.toggleEditing, href: '#', __source: {
+      }), '\xA0\xA0', recipeName, _react2.default.createElement('a', { onClick: this.handleRemoveRecipe, href: '#', __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 37
+        }
+      }, _react2.default.createElement('i', { className: 'glyphicon glyphicon-remove', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        }
+      })), _react2.default.createElement('a', { onClick: this.toggleEditing, href: '#', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
         }
       }, _react2.default.createElement('i', { className: 'glyphicon glyphicon-pencil', __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 38
         }
       }))), this.state.showEntry && _react2.default.createElement(_ShowRecipe2.default, (0, _extends3.default)({}, this.props, this.state, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 41
         }
       })), this.state.isEditing && _react2.default.createElement(_EditRecipe2.default, (0, _extends3.default)({}, this.props, this.state, { toggleEditing: this.toggleEditing, __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 42
         }
       })));
     }

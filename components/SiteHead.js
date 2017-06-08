@@ -16,7 +16,7 @@ class SiteHead extends Component {
         
         <style global>{`
           body {
-            background: url(/static/img/recipe-bkg.jpg) no-repeat;
+            background: url(/static/img/bhook.jpg) no-repeat;
             background-size: cover;
             font-family: Open Sans, Helvetica Neue, Helvetica,Arial, sans-serif;
             font-size: 18px;
@@ -35,7 +35,7 @@ class SiteHead extends Component {
             right: 0;
             top: 0;
             bottom: 0;
-            opacity: 0.65;
+            opacity: 0.55;
           }
 
           .app {

@@ -74,6 +74,9 @@ var RecipeApp = function (_Component) {
       var newRecipe = { recipeName: recipeName, ingredients: [], description: "" };
       var updatedRecipes = (0, _recipeHelpers.addRecipe)(_this.state.recipes, newRecipe);
       _this.setState({ recipes: updatedRecipes });
+    }, _this.deleteRecipe = function (recipeName) {
+      var updatedRecipes = (0, _recipeHelpers.removeRecipe)(_this.state.recipes, recipeName);
+      _this.setState({ recipes: updatedRecipes });
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
 
@@ -82,27 +85,27 @@ var RecipeApp = function (_Component) {
     value: function render() {
       return _react2.default.createElement(_animateComponents.Zoom, { duration: '0.5s', timingFunction: 'ease-in-out', __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 31
         }
       }, _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App', __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 32
         }
       }, _react2.default.createElement('h2', { className: 'app-title', __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 33
         }
-      }, 'Recipe Book'), _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
+      }, 'Cook Bhook'), _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 34
         }
       }, _react2.default.createElement(_NewRecipeForm2.default, { createRecipe: this.createRecipe, __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 35
         }
-      }), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, { saveRecipes: this.saveRecipes, __source: {
+      }), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, { deleteRecipe: this.deleteRecipe, saveRecipes: this.saveRecipes, __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 36
         }
       })))));
     }
