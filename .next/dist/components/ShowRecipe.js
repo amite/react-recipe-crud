@@ -74,12 +74,12 @@ var ShowRecipe = function (_Component) {
         }
       }, "no ingredients added \uD83D\uDE41"), _react2.default.createElement("p", { className: "recipe-description", __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 15
         }
       }, !!description ? description : 'no description yet 🙁')), _react2.default.createElement("style", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 17
         }
       }, "\n            .panel-default {\n              margin-top: 20px;\n            }\n\n            .panel-body {\n              color: #999;\n              font-size: 0.8em;\n              padding-top: 10px;\n            }\n\n            .recipe-description {\n              color: #999;\n            }\n\n            .ingredient-list {\n              padding-left: 0;\n            }\n            .ingredient { \n              display: inline-block;\n              background-color: #77a9c4;\n              color: white;\n              margin: 5px;\n              padding: 2px 8px;\n              font-size: 0.8em;\n              letter-spacing: 0.076em;\n              text-transform: uppercase;\n            }\n          "));
     }

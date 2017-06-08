@@ -59,11 +59,10 @@ var RecipeEntry = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RecipeEntry.__proto__ || (0, _getPrototypeOf2.default)(RecipeEntry)).call.apply(_ref, [this].concat(args))), _this), _this.state = { showEntry: false, showModal: false }, _this.handleModal = function (ev) {
-      ev.preventDefault();
-      _this.setState({ showModal: !_this.state.showModal });
-    }, _this.toggleEntry = function (e) {
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RecipeEntry.__proto__ || (0, _getPrototypeOf2.default)(RecipeEntry)).call.apply(_ref, [this].concat(args))), _this), _this.state = { isEditing: false, showEntry: false }, _this.toggleEntry = function (e) {
       _this.setState({ showEntry: !_this.state.showEntry });
+    }, _this.toggleEditing = function (e) {
+      _this.setState({ isEditing: !_this.state.isEditing });
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
 
@@ -77,40 +76,35 @@ var RecipeEntry = function (_Component) {
 
       return _react2.default.createElement('div', { className: 'list-group-item recipe-item', __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         }
       }, _react2.default.createElement('h4', { className: 'list-group-item-heading recipeHeading', __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         }
       }, _react2.default.createElement('i', { onClick: this.toggleEntry,
         className: 'glyphicon ' + (this.state.showEntry ? "glyphicon-minus" : "glyphicon-plus"), __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 25
         }
-      }), '\xA0\xA0', recipeName, _react2.default.createElement('a', { onClick: this.handleModal, href: '#', __source: {
+      }), '\xA0\xA0', recipeName, _react2.default.createElement('a', { onClick: this.toggleEditing, href: '#', __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 32
         }
       }, _react2.default.createElement('i', { className: 'glyphicon glyphicon-pencil', __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 32
         }
       }))), this.state.showEntry && _react2.default.createElement(_ShowRecipe2.default, (0, _extends3.default)({}, this.props, this.state, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         }
-      })), this.state.showModal && _react2.default.createElement(_EditRecipe2.default, (0, _extends3.default)({}, this.props, this.state, { handleModal: this.handleModal, __source: {
+      })), this.state.isEditing && _react2.default.createElement(_EditRecipe2.default, (0, _extends3.default)({}, this.props, this.state, { toggleEditing: this.toggleEditing, __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         }
-      })), _react2.default.createElement('style', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        }
-      }, '\n\n            .recipe-item {\n              margin-bottom: 15px !important;\n              min-height: 30px;\n              background: rgb(255, 193, 7);\n              color: white;\n              border-radius: 2px !important;\n              box-shadow: 0px 3px 0px 1px #dba915;\n              border: none;\n            }\n\n            .glyphicon-pencil {\n              float: right;\n            }\n            .recipeHeading {\n              font-size: 1em;\n            }\n            .large-ta {\n              height: 110px !important;\n            }\n            .small-text {\n              padding-top: 8px !important;\n              font-size: 12px !important;\n              letter-spacing: 0.05em;\n              color: #f0ad4e;\n              text-transform: uppercase;\n            }\n\n          '));
+      })));
     }
   }]);
 

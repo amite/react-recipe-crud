@@ -10,7 +10,7 @@ export default class NewRecipeForm extends Component{
 
   handleFormSubmit = (ev) => {
     ev.preventDefault()
-    this.state.value ? this.props.handleCreateRecipe(this.state.value) : console.log('empty')
+    this.state.value ? this.props.createRecipe(this.state.value) : console.log('empty')
     this.setState({value: ""})
   }
   
@@ -34,7 +34,6 @@ export default class NewRecipeForm extends Component{
               onClick={this.handleFormSubmit}
               className="form-control btn btn-primary" />
             </div>
-
         </div>
 
         <style>{`

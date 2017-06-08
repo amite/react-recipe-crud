@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -49,20 +53,26 @@ var RecipeList = function (_Component) {
   (0, _createClass3.default)(RecipeList, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
 
       var renderRecipe = function renderRecipe(recipe, index) {
-        return _react2.default.createElement(_RecipeEntry2.default, { key: index, recipe: recipe, __source: {
+        return _react2.default.createElement(_RecipeEntry2.default, (0, _extends3.default)({ key: index }, _this2.props, { recipe: recipe, __source: {
             fileName: _jsxFileName,
             lineNumber: 9
           }
-        });
+        }));
       };
 
       return _react2.default.createElement('div', { className: 'recipe-list', __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         }
-      }, this.props.recipes.map(renderRecipe));
+      }, this.props.recipes.map(renderRecipe), _react2.default.createElement('style', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        }
+      }, '\n            .recipe-item {\n              margin-bottom: 15px !important;\n              min-height: 30px;\n              background: rgb(255, 193, 7);\n              color: white;\n              border-radius: 2px !important;\n              box-shadow: 0px 3px 0px 1px #dba915;\n              border: none;\n            }\n\n            .glyphicon-pencil {\n              float: right;\n            }\n            .recipeHeading {\n              font-size: 1em;\n            }\n            .large-ta {\n              height: 110px !important;\n            }\n            .small-text {\n              padding-top: 8px !important;\n              font-size: 12px !important;\n              letter-spacing: 0.05em;\n              color: #f0ad4e;\n              text-transform: uppercase;\n            }\n\n          '));
     }
   }]);
 

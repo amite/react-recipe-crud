@@ -25,27 +25,6 @@ class SiteHead extends Component {
             height: 100vh;                
           }
 
-          .app {
-            padding-top:80px;
-            transform: translateY(100px);
-            background: white;
-            min-height: 600px;
-            opacity: 0.92;
-            box-shadow: 0px 0px 10px 2px rgba(101, 95, 95, 0.84);
-          }
-
-          .app-title { 
-            font-family: 'Amatic SC', cursive;
-            color: white;
-            text-align: center;
-            position: relative;
-            top: 75px;
-            font-size: 9em;
-            margin-bottom: 0;
-            text-shadow: 0px 5px 7px #575151;
-            letter-spacing: 0.03em;
-          }
-
           body::before {
             content: "";
             background-color: #666;
@@ -56,7 +35,31 @@ class SiteHead extends Component {
             right: 0;
             top: 0;
             bottom: 0;
-            opacity: 0.6;
+            opacity: 0.65;
+          }
+
+          .app {
+            padding-top:80px;
+            transform: translateY(100px);
+            background: white;
+            min-height: 600px;
+            max-height: 600px;
+            opacity: 0.92;
+            box-shadow: 0px 0px 10px 2px rgba(101, 95, 95, 0.84);
+            overflow: hidden;
+            overflow-y: visible;
+          }
+
+          .app-title { 
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 75px;
+            font-size: 13vw;
+            margin-bottom: 0;
+            text-shadow: 0px 5px 7px #575151;
+            letter-spacing: 0.03em;
           }
 
           h1, h2, h3 { 

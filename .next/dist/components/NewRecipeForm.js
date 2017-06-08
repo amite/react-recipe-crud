@@ -51,7 +51,7 @@ var NewRecipeForm = function (_Component) {
       _this.setState({ value: e.target.value });
     }, _this.handleFormSubmit = function (ev) {
       ev.preventDefault();
-      _this.state.value ? _this.props.handleCreateRecipe(_this.state.value) : console.log('empty');
+      _this.state.value ? _this.props.createRecipe(_this.state.value) : console.log('empty');
       _this.setState({ value: "" });
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
@@ -94,7 +94,7 @@ var NewRecipeForm = function (_Component) {
       }))), _react2.default.createElement('style', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 39
         }
       }, '\n          #add-recipe {\n            background: rgba(76, 149, 187, 0.74);\n            padding: 10px;\n            text-align: center;\n            min-width: 100%;\n            position: absolute;\n            left: 0;\n            top: 0px;\n          }\n          #add-recipe input {\n            padding: 0 10px;\n          }\n        '));
     }

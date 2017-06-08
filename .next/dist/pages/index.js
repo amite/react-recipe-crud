@@ -4,14 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _regenerator = require('babel-runtime/regenerator');
-
-var _regenerator2 = _interopRequireDefault(_regenerator);
-
-var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
-
-var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
-
 var _extends2 = require('babel-runtime/helpers/extends');
 
 var _extends3 = _interopRequireDefault(_extends2);
@@ -40,6 +32,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _animateComponents = require('animate-components');
+
 var _Layout = require('../components/Layout');
 
 var _Layout2 = _interopRequireDefault(_Layout);
@@ -52,7 +46,7 @@ var _RecipeList = require('../components/RecipeList');
 
 var _RecipeList2 = _interopRequireDefault(_RecipeList);
 
-var _animateComponents = require('animate-components');
+var _recipeHelpers = require('../lib/recipeHelpers');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -73,9 +67,12 @@ var RecipeApp = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RecipeApp.__proto__ || (0, _getPrototypeOf2.default)(RecipeApp)).call.apply(_ref, [this].concat(args))), _this), _this.state = { recipes: _this.props.recipes }, _this.handleCreateRecipe = function (recipeName) {
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RecipeApp.__proto__ || (0, _getPrototypeOf2.default)(RecipeApp)).call.apply(_ref, [this].concat(args))), _this), _this.state = { recipes: (0, _recipeHelpers.loadRecipes)() }, _this.saveRecipes = function (updatedRecipe) {
+      var updatedRecipes = (0, _recipeHelpers.updateRecipe)(_this.state.recipes, updatedRecipe);
+      _this.setState({ recipes: updatedRecipes });
+    }, _this.createRecipe = function (recipeName) {
       var newRecipe = { recipeName: recipeName, ingredients: [], description: "" };
-      var updatedRecipes = _this.state.recipes.concat(newRecipe);
+      var updatedRecipes = (0, _recipeHelpers.addRecipe)(_this.state.recipes, newRecipe);
       _this.setState({ recipes: updatedRecipes });
     }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
@@ -85,74 +82,30 @@ var RecipeApp = function (_Component) {
     value: function render() {
       return _react2.default.createElement(_animateComponents.Zoom, { duration: '0.5s', timingFunction: 'ease-in-out', __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 26
         }
       }, _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App', __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 27
         }
       }, _react2.default.createElement('h2', { className: 'app-title', __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 28
         }
       }, 'Recipe Book'), _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 29
         }
-      }, _react2.default.createElement(_NewRecipeForm2.default, (0, _extends3.default)({}, this.props, { handleCreateRecipe: this.handleCreateRecipe, __source: {
+      }, _react2.default.createElement(_NewRecipeForm2.default, { createRecipe: this.createRecipe, __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 30
         }
-      })), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, {
-        __source: {
+      }), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, { saveRecipes: this.saveRecipes, __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 31
         }
       })))));
     }
-  }], [{
-    key: 'getInitialProps',
-    value: function () {
-      var _ref3 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee(_ref2) {
-        var req = _ref2.req;
-        var recipes;
-        return _regenerator2.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                recipes = [{
-                  "recipeName": "Pizza",
-                  "ingredients": ["Bread", "Brocolli", "Tomato", "Onion", "Mushroom"],
-                  "description": "Add toppings to dough base and place into oven for 35 minutes on a high heat.\n\nBellissimo!"
-                }, {
-                  "recipeName": "Spaghetti",
-                  "ingredients": ["Spaghetti", "Sauce", "Tomatoes", "Bacon", "Garlic"],
-                  "description": "Try not to get it all over your shirt."
-                }, {
-                  "recipeName": "Meatballs",
-                  "ingredients": ["Minced Beef/Pork", "Onions", "Flour", "Chili Peppers", "Tomatoes", "Seasoning"],
-                  "description": "Roughly chop onions and mix with minced meat. Add flour for firmness until they hold their own shape. Place into pan on high heat with a brushing of oil until browned. Reduce heat until cooked through"
-                }, {
-                  "recipeName": "🧀 CheeseCake",
-                  "ingredients": ["Cream Cheese", "Whipping Cream", "Strawberries", "Ginger Snap Biscuits", "Sugar", "Butter"],
-                  "description": "Crumble the biscuits into a tin and mix with the butter. Heat for a few minutes to form a solid base. Mix the cream cheese and whipping cream until heavy, then apply to top of biscuit base.\n\nAdd strawberries for decoration and leave to rest in fridge for 12 hours."
-                }];
-                return _context.abrupt('return', { recipes: recipes });
-
-              case 2:
-              case 'end':
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function getInitialProps(_x) {
-        return _ref3.apply(this, arguments);
-      }
-
-      return getInitialProps;
-    }()
   }]);
 
   return RecipeApp;

@@ -11,7 +11,6 @@ class ShowRecipe extends Component {
               <ul className="ingredient-list">
                 {ingredients.map((ingredient, index) => <li key={index} className="ingredient">{ingredient}</li>)}
               </ul> : <p>no ingredients added 🙁</p>
-              
             }
             <p className="recipe-description">{!!description ? description : 'no description yet 🙁'}</p>
           </div>
