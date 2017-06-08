@@ -52,6 +52,8 @@ var _RecipeList = require('../components/RecipeList');
 
 var _RecipeList2 = _interopRequireDefault(_RecipeList);
 
+var _animateComponents = require('animate-components');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/pages/index.js?entry';
@@ -81,24 +83,32 @@ var RecipeApp = function (_Component) {
   (0, _createClass3.default)(RecipeApp, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45
-        }
-      }, _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
+      return _react2.default.createElement(_animateComponents.Zoom, { duration: '0.5s', timingFunction: 'ease-in-out', __source: {
           fileName: _jsxFileName,
           lineNumber: 46
         }
-      }, _react2.default.createElement(_NewRecipeForm2.default, (0, _extends3.default)({}, this.props, { handleCreateRecipe: this.handleCreateRecipe, __source: {
+      }, _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App', __source: {
           fileName: _jsxFileName,
           lineNumber: 47
+        }
+      }, _react2.default.createElement('h2', { className: 'app-title', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        }
+      }, 'Recipe Book'), _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        }
+      }, _react2.default.createElement(_NewRecipeForm2.default, (0, _extends3.default)({}, this.props, { handleCreateRecipe: this.handleCreateRecipe, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
         }
       })), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 51
         }
-      }))));
+      })))));
     }
   }], [{
     key: 'getInitialProps',
@@ -127,7 +137,7 @@ var RecipeApp = function (_Component) {
                   "ingredients": ["Cabage", "Water"],
                   "description": "Add cabbage to boiling water. Wait. Eat. Delicious - Maybe..."
                 }, {
-                  "recipeName": "CheeseCake",
+                  "recipeName": "🧀 CheeseCake",
                   "ingredients": ["Cream Cheese", "Whipping Cream", "Strawberries", "Ginger Snap Biscuits", "Sugar", "Butter"],
                   "description": "Crumble the biscuits into a tin and mix with the butter. Heat for a few minutes to form a solid base. Mix the cream cheese and whipping cream until heavy, then apply to top of biscuit base.\n\nAdd strawberries for decoration and leave to rest in fridge for 12 hours."
                 }];

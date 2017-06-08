@@ -32,10 +32,6 @@ var _RecipeEntry = require('./RecipeEntry');
 
 var _RecipeEntry2 = _interopRequireDefault(_RecipeEntry);
 
-var _EditModal = require('../components/EditModal');
-
-var _EditModal2 = _interopRequireDefault(_EditModal);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/components/RecipeList.js';
@@ -57,14 +53,14 @@ var RecipeList = function (_Component) {
       var renderRecipe = function renderRecipe(recipe, index) {
         return _react2.default.createElement(_RecipeEntry2.default, { key: index, recipe: recipe, __source: {
             fileName: _jsxFileName,
-            lineNumber: 11
+            lineNumber: 9
           }
         });
       };
 
       return _react2.default.createElement('div', { className: 'recipe-list', __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 12
         }
       }, this.props.recipes.map(renderRecipe));
     }

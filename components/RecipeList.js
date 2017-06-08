@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 import RecipeEntry from './RecipeEntry'
-import EditModal from '../components/EditModal'
-
 
 class RecipeList extends Component {
 

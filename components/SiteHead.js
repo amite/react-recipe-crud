@@ -12,7 +12,7 @@ class SiteHead extends Component {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="http://propeller.in/components/textfield/css/textfield.css"/>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:400,300,600,700,800" rel="stylesheet" />
         
         <style global>{`
           body {
@@ -23,6 +23,27 @@ class SiteHead extends Component {
             color: #3c3b3b;
             width: 100vw;
             height: 100vh;                
+          }
+
+          .app {
+            padding-top:80px;
+            transform: translateY(100px);
+            background: white;
+            min-height: 600px;
+            opacity: 0.92;
+            box-shadow: 0px 0px 10px 2px rgba(101, 95, 95, 0.84);
+          }
+
+          .app-title { 
+            font-family: 'Amatic SC', cursive;
+            color: white;
+            text-align: center;
+            position: relative;
+            top: 75px;
+            font-size: 9em;
+            margin-bottom: 0;
+            text-shadow: 0px 5px 7px #575151;
+            letter-spacing: 0.03em;
           }
 
           body::before {
@@ -59,18 +80,6 @@ class SiteHead extends Component {
             margin-bottom: 25px;
             line-height: 1.2;
             color: #6d6d6d;
-          }
-
-          .recipe-item {
-            margin-bottom: 15px !important;
-            min-height: 30px;
-            background: rgb(255, 193, 7);
-            color: white;
-            border-radius: 5px;
-          }
-
-          .glyphicon-pencil {
-            float: right;
           }
         `}</style>
       </Head>

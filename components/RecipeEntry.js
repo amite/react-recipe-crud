@@ -11,10 +11,11 @@ class RecipeEntry extends Component {
     this.setState({ showModal: !this.state.showModal })
   }
 
-  render () {
+  render() {
     const { recipeName, description, ingredients } = this.props.recipe
 
     return (
+
       <div>
         <div className="list-group-item recipe-item">
           <h4 className="list-group-item-heading recipeHeading">
@@ -27,8 +28,15 @@ class RecipeEntry extends Component {
               <h2>{recipeName}</h2>
               <div className="form-group pmd-textfield">
                 <label htmlFor="regular1" className="control-label">
+                  Ingredients
+                </label>
+                <input type="text" id="regular1" defaultValue={ingredients.join(", ")} className="form-control small-text" />
+              </div>
+              <div className="form-group pmd-textfield">
+                <label htmlFor="regular1" className="control-label">
                   Description
                 </label>
+
                 <textarea type="text" id="regular1" defaultValue={description} className="form-control large-ta">
                 </textarea>
               </div>
@@ -36,27 +44,37 @@ class RecipeEntry extends Component {
             </EditModal>
           }
           <style>{`
-            .app {
-              padding-top:80px;
-              transform: translateY(200px);
-              background: white;
-              min-height: 600px;
-              opacity: 0.92;
-              box-shadow: 0px 0px 10px 2px rgba(101, 95, 95, 0.84);
+
+            .recipe-item {
+              margin-bottom: 15px !important;
+              min-height: 30px;
+              background: rgb(255, 193, 7);
+              color: white;
+              border-radius: 0 !important;
+              box-shadow: 0px 3px 0px 1px #dba915;
+              border: none;
             }
-            .bkg {
-              background: rgba(0, 0, 0, 0.45);
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              left: 0;
-              top: 0;
+
+            .recipe-item:active {
+              position: relative;
+              top: 2px;
+            }
+
+            .glyphicon-pencil {
+              float: right;
             }
             .recipeHeading {
               font-size: 1em;
             }
             .large-ta {
               height: 110px !important;
+            }
+            .small-text {
+              padding-top: 8px !important;
+              font-size: 12px !important;
+              letter-spacing: 0.05em;
+              color: #f0ad4e;
+              text-transform: uppercase;
             }
             .close-btn {
               position: absolute;
@@ -67,6 +85,7 @@ class RecipeEntry extends Component {
           `}</style>
         </div>
       </div>
+
     )
   }
 }

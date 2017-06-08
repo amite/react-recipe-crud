@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import NewRecipeForm from '../components/NewRecipeForm'
 import RecipeList from '../components/RecipeList'
+import { Zoom } from 'animate-components';
 
 class RecipeApp extends Component {
 
@@ -24,7 +25,7 @@ class RecipeApp extends Component {
       "ingredients": ["Cabage", "Water"],
       "description": "Add cabbage to boiling water. Wait. Eat. Delicious - Maybe..."
     }, {
-      "recipeName": "CheeseCake",
+      "recipeName": "🧀 CheeseCake",
       "ingredients": ["Cream Cheese", "Whipping Cream", "Strawberries", "Ginger Snap Biscuits", "Sugar", "Butter"],
       "description": "Crumble the biscuits into a tin and mix with the butter. Heat for a few minutes to form a solid base. Mix the cream cheese and whipping cream until heavy, then apply to top of biscuit base.\n\nAdd strawberries for decoration and leave to rest in fridge for 12 hours."
     }];
@@ -42,12 +43,15 @@ class RecipeApp extends Component {
 
   render() {
     return (
-      <Layout title="React CRUD Recipe App">
-        <div className="app col-md-6 col-md-offset-3">
-          <NewRecipeForm {...this.props} handleCreateRecipe={this.handleCreateRecipe}  />
-          <RecipeList {...this.state} />
-        </div>
-      </Layout>
+      <Zoom duration='0.5s' timingFunction='ease-in-out'>
+        <Layout title="React CRUD Recipe App">
+          <h2 className="app-title">Recipe Book</h2>
+          <div className="app col-md-6 col-md-offset-3">
+            <NewRecipeForm {...this.props} handleCreateRecipe={this.handleCreateRecipe}  />
+            <RecipeList {...this.state} />
+          </div>
+        </Layout>
+      </Zoom>
     )
   }
 }

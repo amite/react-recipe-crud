@@ -49,13 +49,20 @@ var EditModal = function (_Component) {
   (0, _createClass3.default)(EditModal, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
+      var _this2 = this;
+
       this.modalTarget = document.createElement('div');
       this.modalTarget.className = 'edit-modal';
+
       this.bkgEl = document.createElement('div');
       this.bkgEl.className = 'bkg';
 
       document.body.appendChild(this.bkgEl);
       document.body.appendChild(this.modalTarget);
+
+      setTimeout(function () {
+        _this2.modalTarget.className += ' expand';
+      }, 5);
 
       this._render();
     }
@@ -77,14 +84,14 @@ var EditModal = function (_Component) {
       _reactDom2.default.render(_react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 34
         }
       }, this.props.children, _react2.default.createElement('style', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 36
         }
-      }, '\n          .edit-modal {\n            background: white;\n            width: 50%;\n            top: 50%;\n            transform: translate(50%, -50%);\n            padding: 30px;\n            min-height: 350px;\n            border-radius: 5px;\n            position: fixed;\n            box-shadow: 0px 3px 6px 6px rgba(0, 0, 0, 0.23);\n          }\n        ')), this.modalTarget);
+      }, '\n          .edit-modal {\n            background: white;\n            width: 50%;\n            top: 50%;\n            transform: translate(50%, -50%);\n            padding: 30px;\n            min-height: 350px;\n            border-radius: 5px;\n            position: fixed;\n            box-shadow: 0px 3px 6px 6px rgba(0, 0, 0, 0.23);\n            opacity: 0;            \n            transition: all 0.8s ease-in-out;\n            padding-bottom: 80px;\n          }\n\n          .edit-modal.expand {\n            opacity: 1;\n          }\n\n          .bkg {\n            background: rgba(0, 0, 0, 0.45);\n            position: absolute;\n            width: 100%;\n            height: 100%;\n            left: 0;\n            top: 0;\n          }\n        ')), this.modalTarget);
     }
   }, {
     key: 'render',
@@ -92,7 +99,7 @@ var EditModal = function (_Component) {
       return _react2.default.createElement('noscript', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 71
         }
       });
     }
