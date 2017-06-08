@@ -16,9 +16,9 @@ class SiteHead extends Component {
         
         <style global>{`
           body {
-            background: url('/static/img/recipe-bkg.jpg') no-repeat;
+            background: url(/static/img/recipe-bkg.jpg) no-repeat;
             background-size: cover;
-            font-family: 'Lora','Helvetica Neue', Helvetica,Arial, sans-serif;
+            font-family: Open Sans, Helvetica Neue, Helvetica,Arial, sans-serif;
             font-size: 18px;
             color: #3c3b3b;
             width: 100vw;

@@ -85,28 +85,28 @@ var RecipeApp = function (_Component) {
     value: function render() {
       return _react2.default.createElement(_animateComponents.Zoom, { duration: '0.5s', timingFunction: 'ease-in-out', __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 42
         }
       }, _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App', __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 43
         }
       }, _react2.default.createElement('h2', { className: 'app-title', __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 44
         }
       }, 'Recipe Book'), _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 45
         }
       }, _react2.default.createElement(_NewRecipeForm2.default, (0, _extends3.default)({}, this.props, { handleCreateRecipe: this.handleCreateRecipe, __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 46
         }
       })), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 47
         }
       })))));
     }
@@ -132,10 +132,6 @@ var RecipeApp = function (_Component) {
                   "recipeName": "Meatballs",
                   "ingredients": ["Minced Beef/Pork", "Onions", "Flour", "Chili Peppers", "Tomatoes", "Seasoning"],
                   "description": "Roughly chop onions and mix with minced meat. Add flour for firmness until they hold their own shape. Place into pan on high heat with a brushing of oil until browned. Reduce heat until cooked through"
-                }, {
-                  "recipeName": "Boiled Cabbage",
-                  "ingredients": ["Cabage", "Water"],
-                  "description": "Add cabbage to boiling water. Wait. Eat. Delicious - Maybe..."
                 }, {
                   "recipeName": "🧀 CheeseCake",
                   "ingredients": ["Cream Cheese", "Whipping Cream", "Strawberries", "Ginger Snap Biscuits", "Sugar", "Butter"],

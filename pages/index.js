@@ -21,10 +21,6 @@ class RecipeApp extends Component {
       "ingredients": ["Minced Beef/Pork", "Onions", "Flour", "Chili Peppers", "Tomatoes", "Seasoning"],
       "description": "Roughly chop onions and mix with minced meat. Add flour for firmness until they hold their own shape. Place into pan on high heat with a brushing of oil until browned. Reduce heat until cooked through"
     }, {
-      "recipeName": "Boiled Cabbage",
-      "ingredients": ["Cabage", "Water"],
-      "description": "Add cabbage to boiling water. Wait. Eat. Delicious - Maybe..."
-    }, {
       "recipeName": "🧀 CheeseCake",
       "ingredients": ["Cream Cheese", "Whipping Cream", "Strawberries", "Ginger Snap Biscuits", "Sugar", "Butter"],
       "description": "Crumble the biscuits into a tin and mix with the butter. Heat for a few minutes to form a solid base. Mix the cream cheese and whipping cream until heavy, then apply to top of biscuit base.\n\nAdd strawberries for decoration and leave to rest in fridge for 12 hours."
