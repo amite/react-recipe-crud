@@ -38,9 +38,6 @@ var _Modal2 = _interopRequireDefault(_Modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/components/EditRecipe.js';
-
-
 var EditRecipe = function (_Component) {
   (0, _inherits3.default)(EditRecipe, _Component);
 
@@ -80,54 +77,7 @@ var EditRecipe = function (_Component) {
           ingredients = _props$recipe.ingredients,
           description = _props$recipe.description;
 
-      return this.state.showModal && _react2.default.createElement(_Modal2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        }
-      }, _react2.default.createElement('h2', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        }
-      }, recipeName), _react2.default.createElement('form', { onSubmit: this.handleFormSave, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        }
-      }, _react2.default.createElement('div', { className: 'form-group pmd-textfield', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        }
-      }, _react2.default.createElement('label', { htmlFor: 'regular1', className: 'control-label', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
-        }
-      }, 'Ingredients'), _react2.default.createElement('input', { name: 'ingredients', onChange: this.handleChange, type: 'text', placeholder: 'Add a comma separated list of ingredients', id: 'regular1', defaultValue: this.state.ingredients, className: 'form-control small-text', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        }
-      })), _react2.default.createElement('div', { className: 'form-group pmd-textfield', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45
-        }
-      }, _react2.default.createElement('label', { htmlFor: 'regular1', className: 'control-label', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 46
-        }
-      }, 'Description'), _react2.default.createElement('textarea', { name: 'description', onChange: this.handleChange, type: 'text', id: 'regular1', placeholder: 'Add a nice description', defaultValue: this.state.description, className: 'form-control large-ta', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        }
-      })), _react2.default.createElement('button', { className: 'close-btn btn btn-warning btn-lg', onClick: this.handleFormSave, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        }
-      }, 'save')), _react2.default.createElement('style', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        }
-      }, '\n          .close-btn {\n            position: absolute;\n            right: 20px;\n            bottom: 15px;\n            padding: 5px 45px;\n          }\n            '));
+      return this.state.showModal && _react2.default.createElement(_Modal2.default, null, _react2.default.createElement('h2', null, recipeName), _react2.default.createElement('form', { onSubmit: this.handleFormSave }, _react2.default.createElement('div', { className: 'form-group pmd-textfield' }, _react2.default.createElement('label', { htmlFor: 'regular1', className: 'control-label' }, 'Ingredients'), _react2.default.createElement('input', { name: 'ingredients', onChange: this.handleChange, type: 'text', placeholder: 'Add a comma separated list of ingredients', id: 'regular1', defaultValue: this.state.ingredients, className: 'form-control small-text' })), _react2.default.createElement('div', { className: 'form-group pmd-textfield' }, _react2.default.createElement('label', { htmlFor: 'regular1', className: 'control-label' }, 'Description'), _react2.default.createElement('textarea', { name: 'description', onChange: this.handleChange, type: 'text', id: 'regular1', placeholder: 'Add a nice description', defaultValue: this.state.description, className: 'form-control large-ta' })), _react2.default.createElement('button', { className: 'close-btn btn btn-warning btn-lg', onClick: this.handleFormSave }, 'save')), _react2.default.createElement('style', null, '\n          .close-btn {\n            position: absolute;\n            right: 20px;\n            bottom: 15px;\n            padding: 5px 45px;\n          }\n            '));
     }
   }]);
 

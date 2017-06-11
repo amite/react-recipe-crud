@@ -50,9 +50,6 @@ var _recipeHelpers = require('../lib/recipeHelpers');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/pages/index.js?entry';
-
-
 var RecipeApp = function (_Component) {
   (0, _inherits3.default)(RecipeApp, _Component);
 
@@ -83,31 +80,7 @@ var RecipeApp = function (_Component) {
   (0, _createClass3.default)(RecipeApp, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_animateComponents.Zoom, { duration: '0.5s', timingFunction: 'ease-in-out', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        }
-      }, _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        }
-      }, _react2.default.createElement('h2', { className: 'app-title', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        }
-      }, 'Cook Bhook'), _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        }
-      }, _react2.default.createElement(_NewRecipeForm2.default, { createRecipe: this.createRecipe, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        }
-      }), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, { deleteRecipe: this.deleteRecipe, saveRecipes: this.saveRecipes, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        }
-      })))));
+      return _react2.default.createElement(_animateComponents.Zoom, { duration: '0.5s', timingFunction: 'ease-in-out' }, _react2.default.createElement(_Layout2.default, { title: 'React CRUD Recipe App' }, _react2.default.createElement('h2', { className: 'app-title' }, 'Cook Bhook'), _react2.default.createElement('div', { className: 'app col-md-6 col-md-offset-3' }, _react2.default.createElement(_NewRecipeForm2.default, { createRecipe: this.createRecipe }), _react2.default.createElement(_RecipeList2.default, (0, _extends3.default)({}, this.state, { deleteRecipe: this.deleteRecipe, saveRecipes: this.saveRecipes })))));
     }
   }]);
 

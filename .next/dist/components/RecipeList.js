@@ -38,9 +38,6 @@ var _RecipeEntry2 = _interopRequireDefault(_RecipeEntry);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/components/RecipeList.js';
-
-
 var RecipeList = function (_Component) {
   (0, _inherits3.default)(RecipeList, _Component);
 
@@ -56,23 +53,10 @@ var RecipeList = function (_Component) {
       var _this2 = this;
 
       var renderRecipe = function renderRecipe(recipe, index) {
-        return _react2.default.createElement(_RecipeEntry2.default, (0, _extends3.default)({ key: index }, _this2.props, { recipe: recipe, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9
-          }
-        }));
+        return _react2.default.createElement(_RecipeEntry2.default, (0, _extends3.default)({ key: index }, _this2.props, { recipe: recipe }));
       };
 
-      return _react2.default.createElement('div', { className: 'recipe-list', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        }
-      }, this.props.recipes.map(renderRecipe), _react2.default.createElement('style', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }, '\n            .recipe-item {\n              margin-bottom: 15px !important;\n              min-height: 30px;\n              background: rgb(255, 193, 7);\n              color: white;\n              border-radius: 2px !important;\n              box-shadow: 0px 3px 0px 1px #dba915;\n              border: none;\n            }\n\n            .glyphicon-pencil, .glyphicon-remove {\n              float: right;\n              margin-left: 20px;\n              color: white;\n            }\n            .recipeHeading {\n              font-size: 1em;\n            }\n            .large-ta {\n              height: 110px !important;\n            }\n            .small-text {\n              padding-top: 8px !important;\n              font-size: 12px !important;\n              letter-spacing: 0.05em;\n              color: #f0ad4e;\n              text-transform: uppercase;\n            }\n\n          '));
+      return _react2.default.createElement('div', { className: 'recipe-list' }, this.props.recipes.map(renderRecipe), _react2.default.createElement('style', null, '\n            .recipe-item {\n              margin-bottom: 15px !important;\n              min-height: 30px;\n              background: rgb(255, 193, 7);\n              color: white;\n              border-radius: 2px !important;\n              box-shadow: 0px 3px 0px 1px #dba915;\n              border: none;\n            }\n\n            .glyphicon-pencil, .glyphicon-remove {\n              float: right;\n              margin-left: 20px;\n              color: white;\n            }\n            .recipeHeading {\n              font-size: 1em;\n            }\n            .large-ta {\n              height: 110px !important;\n            }\n            .small-text {\n              padding-top: 8px !important;\n              font-size: 12px !important;\n              letter-spacing: 0.05em;\n              color: #f0ad4e;\n              text-transform: uppercase;\n            }\n\n          '));
     }
   }]);
 

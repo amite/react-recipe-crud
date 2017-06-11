@@ -34,9 +34,6 @@ var _SiteHead2 = _interopRequireDefault(_SiteHead);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/components/Layout.js';
-
-
 var Layout = function (_Component) {
   (0, _inherits3.default)(Layout, _Component);
 
@@ -49,24 +46,7 @@ var Layout = function (_Component) {
   (0, _createClass3.default)(Layout, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        }
-      }, _react2.default.createElement(_SiteHead2.default, { title: this.props.title, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9
-        }
-      }), _react2.default.createElement('div', { className: 'container', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
-      }, _react2.default.createElement('div', { className: 'row', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, this.props.children)));
+      return _react2.default.createElement('div', null, _react2.default.createElement(_SiteHead2.default, { title: this.props.title }), _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement('div', { className: 'row' }, this.props.children)));
     }
   }]);
 

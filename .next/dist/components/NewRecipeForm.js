@@ -30,9 +30,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/components/NewRecipeForm.js';
-
-
 var NewRecipeForm = function (_Component) {
   (0, _inherits3.default)(NewRecipeForm, _Component);
 
@@ -60,43 +57,18 @@ var NewRecipeForm = function (_Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('form', { id: 'add-recipe',
-        onSubmit: this.handleFormSubmit,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        }
-      }, _react2.default.createElement('div', { className: 'input-group add-on', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        }
-      }, _react2.default.createElement('input', {
+        onSubmit: this.handleFormSubmit
+      }, _react2.default.createElement('div', { className: 'input-group add-on' }, _react2.default.createElement('input', {
         placeholder: 'Add New Recipe',
         type: 'text',
         value: this.state.value,
         onChange: this.handleChange,
-        className: 'form-control',
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        }
-      }), _react2.default.createElement('div', { className: 'input-group-btn', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        }
-      }, _react2.default.createElement('input', {
+        className: 'form-control'
+      }), _react2.default.createElement('div', { className: 'input-group-btn' }, _react2.default.createElement('input', {
         type: 'submit',
         value: '+ Add',
         onClick: this.handleFormSubmit,
-        className: 'form-control btn btn-primary', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        }
-      }))), _react2.default.createElement('style', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        }
-      }, '\n          #add-recipe {\n            background: rgba(76, 149, 187, 0.74);\n            padding: 10px;\n            text-align: center;\n            min-width: 100%;\n            position: absolute;\n            left: 0;\n            top: 0px;\n          }\n          #add-recipe input {\n            padding: 0 10px;\n          }\n        '));
+        className: 'form-control btn btn-primary' }))), _react2.default.createElement('style', null, '\n          #add-recipe {\n            background: rgba(76, 149, 187, 0.74);\n            padding: 10px;\n            text-align: center;\n            min-width: 100%;\n            position: absolute;\n            left: 0;\n            top: 0px;\n          }\n          #add-recipe input {\n            padding: 0 10px;\n          }\n        '));
     }
   }]);
 

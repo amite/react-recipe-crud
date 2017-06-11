@@ -34,9 +34,6 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/components/Modal.js';
-
-
 var Modal = function (_Component) {
   (0, _inherits3.default)(Modal, _Component);
 
@@ -81,27 +78,12 @@ var Modal = function (_Component) {
   }, {
     key: '_render',
     value: function _render() {
-      _reactDom2.default.render(_react2.default.createElement('div', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        }
-      }, this.props.children, _react2.default.createElement('style', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        }
-      }, '\n          .edit-modal {\n            background: white;\n            width: 50%;\n            top: 50%;\n            transform: translate(50%, -50%);\n            padding: 30px;\n            min-height: 350px;\n            border-radius: 5px;\n            position: fixed;\n            box-shadow: 0px 3px 6px 6px rgba(0, 0, 0, 0.23);\n            opacity: 0;            \n            transition: all 0.8s ease-in-out;\n            padding-bottom: 80px;\n          }\n\n          .edit-modal.expand {\n            opacity: 1;\n          }\n\n          .bkg {\n            background: rgba(0, 0, 0, 0.45);\n            position: absolute;\n            width: 100%;\n            height: 100%;\n            left: 0;\n            top: 0;\n          }\n        ')), this.modalTarget);
+      _reactDom2.default.render(_react2.default.createElement('div', null, this.props.children, _react2.default.createElement('style', null, '\n          .edit-modal {\n            background: white;\n            width: 50%;\n            top: 50%;\n            transform: translate(50%, -50%);\n            padding: 30px;\n            min-height: 350px;\n            border-radius: 5px;\n            position: fixed;\n            box-shadow: 0px 3px 6px 6px rgba(0, 0, 0, 0.23);\n            opacity: 0;            \n            transition: all 0.8s ease-in-out;\n            padding-bottom: 80px;\n          }\n\n          .edit-modal.expand {\n            opacity: 1;\n          }\n\n          .bkg {\n            background: rgba(0, 0, 0, 0.45);\n            position: absolute;\n            width: 100%;\n            height: 100%;\n            left: 0;\n            top: 0;\n          }\n        ')), this.modalTarget);
     }
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('noscript', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        }
-      });
+      return _react2.default.createElement('noscript', null);
     }
   }]);
 

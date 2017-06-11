@@ -42,9 +42,6 @@ var _EditRecipe2 = _interopRequireDefault(_EditRecipe);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/amiterandole/Documents/current/mypresentations/react-next-codelab/react-recipe-crud/components/RecipeEntry.js';
-
-
 var RecipeEntry = function (_Component) {
   (0, _inherits3.default)(RecipeEntry, _Component);
 
@@ -77,45 +74,8 @@ var RecipeEntry = function (_Component) {
           description = _props$recipe.description,
           ingredients = _props$recipe.ingredients;
 
-      return _react2.default.createElement('div', { className: 'list-group-item recipe-item', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        }
-      }, _react2.default.createElement('h4', { className: 'list-group-item-heading recipeHeading', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        }
-      }, _react2.default.createElement('i', { onClick: this.toggleEntry,
-        className: 'glyphicon ' + (this.state.showEntry ? "glyphicon-minus" : "glyphicon-plus"), __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        }
-      }), '\xA0\xA0', recipeName, _react2.default.createElement('a', { onClick: this.handleRemoveRecipe, href: '#', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        }
-      }, _react2.default.createElement('i', { className: 'glyphicon glyphicon-remove', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        }
-      })), _react2.default.createElement('a', { onClick: this.toggleEditing, href: '#', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        }
-      }, _react2.default.createElement('i', { className: 'glyphicon glyphicon-pencil', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        }
-      }))), this.state.showEntry && _react2.default.createElement(_ShowRecipe2.default, (0, _extends3.default)({}, this.props, this.state, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41
-        }
-      })), this.state.isEditing && _react2.default.createElement(_EditRecipe2.default, (0, _extends3.default)({}, this.props, this.state, { toggleEditing: this.toggleEditing, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42
-        }
-      })));
+      return _react2.default.createElement('div', { className: 'list-group-item recipe-item' }, _react2.default.createElement('h4', { className: 'list-group-item-heading recipeHeading' }, _react2.default.createElement('i', { onClick: this.toggleEntry,
+        className: 'glyphicon ' + (this.state.showEntry ? "glyphicon-minus" : "glyphicon-plus") }), '\xA0\xA0', recipeName, _react2.default.createElement('a', { onClick: this.handleRemoveRecipe, href: '#' }, _react2.default.createElement('i', { className: 'glyphicon glyphicon-remove' })), _react2.default.createElement('a', { onClick: this.toggleEditing, href: '#' }, _react2.default.createElement('i', { className: 'glyphicon glyphicon-pencil' }))), this.state.showEntry && _react2.default.createElement(_ShowRecipe2.default, (0, _extends3.default)({}, this.props, this.state)), this.state.isEditing && _react2.default.createElement(_EditRecipe2.default, (0, _extends3.default)({}, this.props, this.state, { toggleEditing: this.toggleEditing })));
     }
   }]);
 
